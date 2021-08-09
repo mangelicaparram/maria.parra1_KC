@@ -4,7 +4,7 @@ arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 print(arr)
 arr[1::2] =-1
 print(arr)
-=============== RESTART: C:/Users/mapm_PC/Downloads/prueba.py ===============
+========== RESTART: C:/Users/mapm_PC/Downloads/Taller_1-Keycode.py ==========
 [0 1 2 3 4 5 6 7 8 9]
 [ 0 -1  2 -1  4 -1  6 -1  8 -1]
 
