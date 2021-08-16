@@ -1,10 +1,10 @@
 #ejercicio 1
+
 #Escriba una función que reciba un numero entero (positivo) o un String
 #y entregue como respuesta si la entrada es o no un palíndromo.
 
 #palíndromo en una Palabra o expresión que es igual si se lee
 #de izquierda a derecha que de derecha a izquierda.
-
 
 palindromos = [input("Ingrese la palabra o numero que desea evaluar: ")]
 
@@ -61,7 +61,8 @@ else:
 RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 2/numero primo.py 
 Ingrese el número que desea evaluar: 3
 Es primo
->>> RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 2/numero primo.py 
+>>>
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 2/numero primo.py 
 Ingrese el número que desea evaluar: 4
 No es primo
 
@@ -95,6 +96,7 @@ Hasta que número desea el listado de números primos?: 100
   2  3  5  7  11  13  17  19  23  29  31  37  41  43  47  53  59  61  67  71  73  79  83  89  97
 Hay 25 números primos en la lista de 100 números.
 >>> 
+
 
 
 
