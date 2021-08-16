@@ -122,4 +122,37 @@ Ingrese el segundo número: 6
 El Máximo Común Divisor entre 10 y 6 es:  2
 >>> 
 
+#ejercicio 6
+
+#Escriba una función que reciba un numero arábigo hasta 1000 y retorne como resultado
+#el numero romano de dicho número.
+
+numa= int(input("Ingrese el número arábigo menor que 1.000 que quiere convertir a romano: "))
+
+def arabigo_a_romano(numa):
+    numeros = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    numerales = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+    numeral = ''
+    i = 0
+    while ((numa>0) and (numa<=1000)):
+        for _ in range(numa//numeros[i]):
+            numeral += numerales[i]
+            numa -= numeros[i]
+        i+=1
+    return numeral
+
+print('El numero arábigo', numa, 'es mayor que 1000.')
+
+print(arabigo_a_romano(numa))
+
+>>> 
+ RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 2/mcd.py 
+Ingrese el número arábigo menor que 1.000 que quiere convertir a romano: 1001
+El numero arábigo 1001 es mayor que 1000.
+>>> 
+ RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 2/mcd.py 
+Ingrese el número arábigo menor que 1.000 que quiere convertir a romano: 96
+El numero arábigo 96 es mayor que 1000.
+XCVI
+>>> 
 
