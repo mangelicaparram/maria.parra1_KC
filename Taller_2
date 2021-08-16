@@ -65,6 +65,38 @@ Es primo
 Ingrese el número que desea evaluar: 4
 No es primo
 
+#ejercicio 3
+
+#Escriba una función que devuelva una lista de numeros primos con base en
+#la cantidad que el usuario le solicite, Ejemplo si el usuario ingresa 3
+#debe retornar los 3 primeros numeros primos.
+
+#un número primo: Es un número natural, Es mayor que 1 y
+#Son divisibles por sí mismo y por 1
+
+lista = int(input('Hasta que número desea el listado de números primos?: '))
+cont = 0
+for i in range(2, lista + 1):
+    primos = True
+    for j in range(2,11):
+        if i == j:
+           break
+        elif i%j == 0:
+           primos = False
+        else:
+           continue
+    if primos == True:
+        print(' ',i, end='')
+        cont += 1
+print('\nHay', cont, 'números primos en la lista de', lista, 'números.')
+
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 2/numero primo-2.py 
+Hasta que número desea el listado de números primos?: 100
+  2  3  5  7  11  13  17  19  23  29  31  37  41  43  47  53  59  61  67  71  73  79  83  89  97
+Hay 25 números primos en la lista de 100 números.
+>>> 
+
+
 
 
 
