@@ -20,6 +20,16 @@ if __name__ == '__main__':
             print('Es palindromo')
         else:
             print('No es palindromo')
+>>>
+RESTART: C:\Users\mapm_PC\Documents\SENA\TEC Analisis y Desarrollo de Sistemas de Informacion\Convocatoria Mujeres\Técnica\Semana 2\palindromo.py 
+Ingrese la palabra o numero que desea evaluar: anita lava la tina
+True
+Es palindromo
+>>> 
+ RESTART: C:\Users\mapm_PC\Documents\SENA\TEC Analisis y Desarrollo de Sistemas de Informacion\Convocatoria Mujeres\Técnica\Semana 2\palindromo.py 
+Ingrese la palabra o numero que desea evaluar: anita no lava la tina
+False
+No es palindromo
 
 #ejercicio 2
 
@@ -47,6 +57,13 @@ if (es_primo(num) == True):
 else:
     print('No es primo')
 
+>>>
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 2/numero primo.py 
+Ingrese el número que desea evaluar: 3
+Es primo
+>>> RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 2/numero primo.py 
+Ingrese el número que desea evaluar: 4
+No es primo
 
 
 
