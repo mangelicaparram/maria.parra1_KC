@@ -1,1 +1,25 @@
+#ejercicio 1
+#Escriba una función que reciba un numero entero (positivo) o un String
+#y entregue como respuesta si la entrada es o no un palíndromo.
+
+#palíndromo en una Palabra o expresión que es igual si se lee
+#de izquierda a derecha que de derecha a izquierda.
+
+
+palindromos = [input("Ingrese la palabra o numero que desea evaluar: ")]
+
+def es_palindromo(p):
+    estandar = str(p).lower().replace(' ', '')
+    return estandar == estandar[::-1]
+
+if __name__ == '__main__':
+    for p in palindromos:
+        resultado = es_palindromo(p)
+        print(resultado)
+        if resultado == True:
+            print('Es palindromo')
+        else:
+            print('No es palindromo')
+
+
 
