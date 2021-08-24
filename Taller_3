@@ -1,1 +1,45 @@
+#Taller 3
+success_estimates = {'Australia': [0.6, 0.33, 0.11, 0.14],
+                     'France': [0.66, 0.78, 0.98, 0.2],
+                     'Italy': [0.6],
+                     'Brazil': [0.22, 0.22, 0.43],
+                     'USA': [0.2, 0.5, 0.3],
+                     'England': [0.45],
+                     'Canada': [0.25, 0.3],
+                     'Argentina': [0.22],
+                     'Greece': [0.45, 0.66, 0.75, 0.99, 0.15, 0.66],
+                     'Morocco': [0.29],
+                     'Tunisia': [0.68, 0.56],
+                     'Egypt': [0.99],
+                     'Jamaica': [0.61, 0.65, 0.71],
+                     'Switzerland': [0.73, 0.86, 0.84, 0.51, 0.99],
+                     'Germany': [0.45, 0.49, 0.36]}
+                     
+#Ejercicio 1
+buscar=input('Buscar llave primaria del diccionario: ')
+print("Resultado: ",success_estimates.get(buscar,"No se encuentra esa llave primaria en el diccionario."))
+
+>>> 
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 3/Taller/taller3.py 
+Buscar llave primaria del diccionario: Morocco
+Resultado:  [0.29]
+>>> 
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 3/Taller/taller3.py 
+Buscar llave primaria del diccionario: Japan
+Resultado:  No se encuentra esa llave primaria en el diccionario.
+>>> 
+
+print(success_estimates.get('Morocco','Japan'))
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 3/Taller/taller3.py 
+[0.29]
+>>> 
+
+#Ejercicio 2
+
+
+#Ejercicio 3
+¿Cuál de las siguientes opciones sería útil para almacenar estimaciones de éxito del proyecto si estuvieran disponibles a nivel regional en lugar de a nivel nacional?
+En una lista. Porque solamente se necesita almacenar estimaciones a nivel regional; datos que vienen de un diccionario.
+Además, la lista permite almacenar cualquier tipo de valor como enteros, cadenas y hasta otras funciones.
+
 
