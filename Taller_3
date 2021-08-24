@@ -35,11 +35,26 @@ RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas d
 >>> 
 
 #Ejercicio 2
-
+print('France tiene', len(success_estimates.get('France')))
+print('Greece tiene', len(success_estimates.get('Greece')))
+print('Morocco tiene', len(success_estimates.get('Morocco')))
+ RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 3/Taller/taller3.py 
+France tiene 4
+Greece tiene 6
+Morocco tiene 1
+>>> 
 
 #Ejercicio 3
 ¿Cuál de las siguientes opciones sería útil para almacenar estimaciones de éxito del proyecto si estuvieran disponibles a nivel regional en lugar de a nivel nacional? Lista, Diccionario, Cadena o Flotante.
 En una lista. Porque solamente se necesita almacenar estimaciones a nivel regional; datos que vienen de un diccionario.
 Además, la lista permite almacenar cualquier tipo de valor como enteros, cadenas y hasta otras funciones.
 
+a=len(success_estimates.get('France'))
+b=len(success_estimates.get('Greece'))
+c=len(success_estimates.get('Morocco'))
+est={a,b,c}
+print(est)
 
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 3/Taller/taller3.py 
+{1, 4, 6}
+>>> 
