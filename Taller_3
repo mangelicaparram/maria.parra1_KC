@@ -82,3 +82,32 @@ El promedio de la tasa de éxito de Egypt es 0.99
 El promedio de la tasa de éxito de Jamaica es 0.6566666666666666
 El promedio de la tasa de éxito de Switzerland es 0.7859999999999999
 El promedio de la tasa de éxito de Germany es 0.4333333333333333
+
+#Ejercicio 5
+#Escribir un bucle for para calcular el mínimo y el máximo de la lista de estimaciones de éxito de cada país,
+#imprimiendo cada uno de forma consecutiva como en el ejemplo de bucle for anterior.
+
+for x in success_estimates.keys():
+    min_lista = min(success_estimates[x])
+    max_lista = max(success_estimates[x])
+    print('La estimación mínima de', x,'es', min_lista, 'y la estimación máxima es', max_lista)
+
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 3/Taller/taller3.py 
+La estimación mínima de Australia es 0.11 y la estimación máxima es 0.6
+La estimación mínima de France es 0.2 y la estimación máxima es 0.98
+La estimación mínima de Italy es 0.6 y la estimación máxima es 0.6
+La estimación mínima de Brazil es 0.22 y la estimación máxima es 0.43
+La estimación mínima de USA es 0.2 y la estimación máxima es 0.5
+La estimación mínima de England es 0.45 y la estimación máxima es 0.45
+La estimación mínima de Canada es 0.25 y la estimación máxima es 0.3
+La estimación mínima de Argentina es 0.22 y la estimación máxima es 0.22
+La estimación mínima de Greece es 0.15 y la estimación máxima es 0.99
+La estimación mínima de Morocco es 0.29 y la estimación máxima es 0.29
+La estimación mínima de Tunisia es 0.56 y la estimación máxima es 0.68
+La estimación mínima de Egypt es 0.99 y la estimación máxima es 0.99
+La estimación mínima de Jamaica es 0.61 y la estimación máxima es 0.71
+La estimación mínima de Switzerland es 0.51 y la estimación máxima es 0.99
+La estimación mínima de Germany es 0.36 y la estimación máxima es 0.49
+>>> 
+
+   
