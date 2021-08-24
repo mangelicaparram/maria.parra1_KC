@@ -58,3 +58,27 @@ print(est)
 RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 3/Taller/taller3.py 
 {1, 4, 6}
 >>> 
+
+#Ejercicio 4
+#Crear un loop que obtenga e imprima el promedio de la tasa de exito de cada pais
+
+for x in success_estimates:
+    success_estimates.keys()
+    print('El promedio de la tasa de éxito de', x, 'es', sum(success_estimates[x]) / len(success_estimates[x]))
+
+RESTART: C:/Users/mapm_PC/Documents/SENA/TEC Analisis y Desarrollo de Sistemas de Informacion/Convocatoria Mujeres/Técnica/Semana 3/Taller/taller3.py 
+El promedio de la tasa de éxito de Australia es 0.29500000000000004
+El promedio de la tasa de éxito de France es 0.655
+El promedio de la tasa de éxito de Italy es 0.6
+El promedio de la tasa de éxito de Brazil es 0.29
+El promedio de la tasa de éxito de USA es 0.3333333333333333
+El promedio de la tasa de éxito de England es 0.45
+El promedio de la tasa de éxito de Canada es 0.275
+El promedio de la tasa de éxito de Argentina es 0.22
+El promedio de la tasa de éxito de Greece es 0.61
+El promedio de la tasa de éxito de Morocco es 0.29
+El promedio de la tasa de éxito de Tunisia es 0.6200000000000001
+El promedio de la tasa de éxito de Egypt es 0.99
+El promedio de la tasa de éxito de Jamaica es 0.6566666666666666
+El promedio de la tasa de éxito de Switzerland es 0.7859999999999999
+El promedio de la tasa de éxito de Germany es 0.4333333333333333
