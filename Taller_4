@@ -72,6 +72,9 @@ df['DATE']=pd.to_datetime(df['DATE']) #formato datetime python
 montly_accidents = df.groupby(df['DATE'].dt.to_period('M')).size()
 print(montly_accidents)
 montly_accidents.plot.line()
+plt.xlabel('Fecha')
+plt.ylabel('Frecuencia')
+plt.title('Evolución de Accidentes NYC')
 
 DATE
 2018-01    11735
@@ -95,9 +98,24 @@ DATE
 2019-07    12014
 2019-08     8466
 Freq: M, dtype: int64
-
-<matplotlib.axes._subplots.AxesSubplot at 0x7f1c67c54490>
+Text(0.5, 1.0, 'Evolución de Accidentes NYC')
 
 
 ¿Ha aumentado el número de accidentes durante el último año y medio?
+En el 2018 se presentó aumento variable hasta Enero 2019.
+Se presentó una reducción en Febrero 2019 y aumentó considerablemente entre Abril y Mayo 2019.
+Sin embargo, en 2019 se redujo el número de accidentes en comparación con el año 2018 y sigue descendiendo.
+En conclusión, no han aumentado el número de accidentes.
+
+#Ejercicio 3
+De la gráfica anterior, ¿qué meses parecen tener el menor número de accidentes?
+Febrero de 2018 y 2019, y Abril de 2018 y 2019
+¿Cuáles crees que son las razones detrás de esto?
+En febrero, porque NYC está en invierno y las nevadas provocan bloqueos en las vías que no permiten que
+la ciudadanía use sus vehículos.
+
+#Ejercicio 4
+¿Cómo varía el número de accidentes a lo largo de un solo día?
+Cree una nueva columna HOUR basada en los datos de la columna TIME,
+luego trace un gráfico de barras de la distribución por hora a lo largo del día.
 
