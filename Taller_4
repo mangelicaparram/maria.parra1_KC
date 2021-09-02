@@ -1,1 +1,38 @@
+#Taller 4
+
+import json
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy
+
+from google.colab import drive
+import os
+drive.mount('/content/gdrive')
+
+with open('/content/gdrive/MyDrive/Python/Caso NYC/data/borough_data.json') as f:
+  borough_data=json.load(f)
+  borough_data
+  print(borough_data)
+  {'the bronx': {'name': 'the bronx', 'population': 1471160.0, 'area': 42.1}, 'brooklyn': {'name': 'brooklyn', 'population': 2648771.0, 'area': 70.82}, 'manhattan': {'name': 'manhattan', 'population': 1664727.0, 'area': 22.83}, 'queens': {'name': 'queens', 'population': 2358582.0, 'area': 108.53}, 'staten island': {'name': 'staten island', 'population': 479458.0, 'area': 58.37}}
+ 
+ with open('/content/gdrive/MyDrive/Python/Caso NYC/data/accidents.csv') as f:
+  df=pd.read_csv(f, delimiter=';')
+  print(df)
+              DATE   TIME  ... VEHICLE TYPE CODE 4  VEHICLE TYPE CODE 5
+0       09/26/2018  12:12  ...                 NaN                  NaN
+1       09/25/2018  16:30  ...                 NaN                  NaN
+2       08/22/2019  19:30  ...                 NaN                  NaN
+3       09/23/2018  13:10  ...                 NaN                  NaN
+4       08/20/2019  22:40  ...                 NaN                  NaN
+...            ...    ...  ...                 ...                  ...
+238517  01/20/2018  15:00  ...                 NaN                  NaN
+238518  01/04/2018  14:00  ...                 NaN                  NaN
+238519  01/20/2018  13:05  ...                 NaN                  NaN
+238520  01/29/2018  17:45  ...                 NaN                  NaN
+238521  01/23/2018  16:38  ...                 NaN                  NaN
+
+[238522 rows x 24 columns]
 
