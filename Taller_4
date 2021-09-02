@@ -69,7 +69,9 @@ y flotas de la ciudad reciben capacitación y educación de seguridad de vanguar
 Agrupe los datos disponibles mensualmente y genere un line plot de accidentes a lo largo del tiempo.
 
 df['DATE']=pd.to_datetime(df['DATE']) #formato datetime python
-df.groupby(df['DATE'].dt.to_period('M')).size()
+montly_accidents = df.groupby(df['DATE'].dt.to_period('M')).size()
+print(montly_accidents)
+montly_accidents.plot.line()
 
 DATE
 2018-01    11735
@@ -94,6 +96,7 @@ DATE
 2019-08     8466
 Freq: M, dtype: int64
 
+<matplotlib.axes._subplots.AxesSubplot at 0x7f1c67c54490>
 
 
 ¿Ha aumentado el número de accidentes durante el último año y medio?
