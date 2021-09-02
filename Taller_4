@@ -100,7 +100,6 @@ DATE
 Freq: M, dtype: int64
 Text(0.5, 1.0, 'Evolución de Accidentes NYC')
 
-
 ¿Ha aumentado el número de accidentes durante el último año y medio?
 En el 2018 se presentó aumento variable hasta Enero 2019.
 Se presentó una reducción en Febrero 2019 y aumentó considerablemente entre Abril y Mayo 2019.
@@ -115,7 +114,10 @@ En febrero, porque NYC está en invierno y las nevadas provocan bloqueos en las 
 la ciudadanía use sus vehículos.
 
 #Ejercicio 4
-¿Cómo varía el número de accidentes a lo largo de un solo día?
 Cree una nueva columna HOUR basada en los datos de la columna TIME,
 luego trace un gráfico de barras de la distribución por hora a lo largo del día.
 
+df = pd.DataFrame(montly_accidents,columns=['HOUR'])
+df['HOUR'] = pd.to_datetime(df['HOUR']).dt.hour
+
+¿Cómo varía el número de accidentes a lo largo de un solo día?
