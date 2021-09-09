@@ -2,7 +2,7 @@ Taller 5
 
 ¿Qué factores son críticos para las solicitudes de hipotecas?
 
-Ejercicio 1:
+Ejercicio 1: Comprender y aclarar la pregunta de interés
 1.1
 Una de las preguntas que le hace a su jefe debe aclarar el resultado de interés. ¿Qué parte del resultado de la solicitud de préstamo hipotecario le interesa?
 ¿Cuáles de los siguientes son ejemplos de resultados "buenos" (específicos y mensurables) de solicitudes de préstamos hipotecarios? Seleccione todas las que correspondan.
@@ -46,6 +46,132 @@ Momento de la aplicación? Edad, Estabilidad laboral.
 Features de la casa a ser comprada? Ingresos mensuales.
 ¿Estructura de amortización de la hipoteca que se solicita? Historial de pagos.
 
+Ejercicio 2: Conoce tu conjunto de datos ideal
 
+Ahora, suponga que ha realizado el ejercicio anterior con su jefe y ha aclarado que quiere responder la pregunta:
+
+¿Qué factores de las solicitudes de hipotecas para viviendas unifamiliares en los EE. UU están más relacionados con el reembolso a tiempo de ese préstamo?
+
+Ejercicio 2:
+2.1
+Vuelva a leer la pregunta aclarada de interés. En igualdad de condiciones, ¿preferiría tener un conjunto de datos sobre solicitudes de hipotecas unifamiliares que contenga:
+
+(a) 10,000 solicitudes de todo Estados Unidos;
+(b) 250.000 solicitudes de todo Estados Unidos;
+(c) 500,000 solicitudes de solo California;
+(d) todas las solicitudes de hipotecas multifamiliares.
+
+Respuesta.
+(b) 250.000 solicitudes de todo Estados Unidos;
+
+Porque la Estadística permite el análisis de una muestra representativa que contenga la mayor cantidad de características del universo, que en este caso las solicitudes
+de hipotecas en EEUU. Por lo tanto, la respuesta b es la más apropiada porque recopila muestras de todo el territorio americano.
+
+2.2
+El conjunto de datos ideal definitivamente debe incluir el resultado de interés (p. Ej., Llámelo paid_back_on_time) y tantos factores como sea posible que podrían influir 
+en este resultado, como:
+
+__________________________________________________________________________________________________________
+borrower_credit_score | loan_amount_usd | zipcode | borrower_first_time_mortgage | ... | paid_back_on_time
+
+Según la pregunta de interés aclarada, ¿cuántos valores puede asumir paid_back_on_time?
+
+(a) 1
+(b) 2
+(c) cualquier número entero no negativo
+(d) cualquier número no negativo
+
+Respuesta.
+(c) cualquier número entero no negativo
+Porque, el puntaje asignado dependiendo de los factores, es un número entero positivo (o no negativo). Quiere decir que, a mayor número entero no negativo,
+mayor calificación positiva en su historial crediticio.
+
+Ejercicio 3: Lea y comprenda la descripción de los datos
+
+3.1
+Fannie Mae actualiza sus datos basándose en los esfuerzos continuos de aseguramiento de la calidad. TRUE o FALSE?
+
+Respuesta.
+True, Verdadero. Los documentos adjuntos evidencian que durante las actualizaciones trimestrales, Fannie Mae ha actualizado los datos de adquisición en el conjunto
+de datos principal para reflejar cualquier corrección de datos resultante de los esfuerzos continuos de aseguramiento de la calidad.
+Las correcciones podrían resultar en la adición o eliminación de préstamos hipotecarios de la población original.
+Además, los datos de rendimiento también reflejarán cambios si se han realizado correcciones en el servicio en el trimestre anterior.
+
+3.2
+Si Fannie Mae actualiza sus datos, ¿cómo afectan las correcciones al conjunto de datos?
+
+(a) Las correcciones solo pueden resultar en adiciones de préstamos hipotecarios.
+(b) Las correcciones solo pueden resultar en remociones.
+(c) Las correcciones pueden resultar en adiciones o eliminaciones.
+(d) El sitio web no indica cómo las correcciones pueden afectar el conjunto de datos.
+
+Respuesta.
+(c) Las correcciones pueden resultar en adiciones o eliminaciones.
+Porque las correcciones podrían resultar en la adición o eliminación de préstamos hipotecarios de la población original.
+
+3.3
+¿Qué hace Fannie Mae con sus conjuntos de datos cuando faltan datos o no están disponibles?
+
+(a) Elimina toda la entrada de datos.
+(b) Deja esos valores en blanco.
+(c) Reemplaza esos valores con la palabra "faltante".
+(d) El sitio web no indica cómo se manejan los valores faltantes o no disponibles.
+
+Respuesta.
+(b) Deja esos valores en blanco.
+Porque en los casos en que los datos no estén disponibles, Fannie Mae dejará ese valor en blanco.
+
+Ejercicio 4: Explorando la acquision de datos
+
+4.1
+¿Qué tendencia, si alguna, observa en el puntaje crediticio promedio del prestatario a lo largo del tiempo?
+
+(a) El puntaje crediticio promedio del prestatario está aumentando aproximadamente;
+(b) La calificación crediticia promedio del prestatario está disminuyendo aproximadamente;
+(c) La calificación crediticia promedio del prestatario permanece aproximadamente igual;
+(d). Ninguna de las anteriores.
+
+Respuesta.
+(c) La calificación crediticia promedio del prestatario permanece aproximadamente igual;
+Porque ha tenido aumentos y disminuciones a lo largo del tiempo. Aumentó desde el 2000, descendió en 2004, aumentó en 2005, descendió en 2006, aumentó en 2008 con la burbuja
+hipotecaria, descendió en 2013, aumentó en 2016 y descendió en 2017 hasta 2019.
+
+4.2
+Tenga en cuenta que el puntaje crediticio promedio del coprestatario tiende a ser más alto que el puntaje crediticio promedio del prestatario.
+¿Es esto sorprendente? ¿Por qué o por qué no?
+
+Respuesta.
+No es sorprendente. Porque el coprestatario es el aval para la entidad en caso que el prestatario no pueda pagar el préstamo. En consecuencia, debe tener puntaje crediticio
+más alto que el prestatario.
+
+4.3
+Con base en el gráfico anterior, ¿cómo describiría la distribución de las calificaciones crediticias de los prestatarios para las solicitudes de préstamos 
+con el propósito de construcción?
+
+(a) La distribución parece aproximadamente simétrica;
+(b) La distribución parece más o menos sesgada a la derecha;
+(c) La distribución parece más o menos sesgada a la izquierda;
+(d) No se puede deducir de la trama proporcionada.
+
+Respuesta.
+(a) La distribución parece aproximadamente simétrica;
+Porque se evidencia que:
+Rango aproximado entre 600 y 850
+Mediana aproximada es 740, ubicada aproximadamente en el centro de la caja.
+
+4.4
+Con base en el gráfico anterior, ¿cómo describiría la distribución de las calificaciones crediticias del prestatario para las solicitudes de préstamos 
+con el propósito de construcción versus compra? Seleccione todas las que correspondan.
+
+(a) Las distribuciones tienen el mismo aspecto;
+(b) Las calificaciones crediticias del prestatario parecen significativamente más altas para las viviendas en venta;
+(c) Las calificaciones crediticias del prestatario parecen significativamente más bajas para las viviendas en venta;
+(d) No se puede deducir de la trama proporcionada.
+
+Respuesta.
+(b) Las calificaciones crediticias del prestatario parecen significativamente más altas para las viviendas en venta;
+Porque la mayoría de los datos se encuentran por encima de la Mediana de la gráfica de Construcción.
+
+Ejercicio 5:
 
 
