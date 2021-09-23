@@ -151,4 +151,16 @@ array([[  0.        , 695.54964914, 617.88099439, ..., 133.886184  ,
        [251.57343468, 818.30048259, 767.44939952, ..., 373.49300085,
          19.99239837,   0.        ]])
   
-  
+4-Utilizaremos complete para nuestro caso, pero en una proxima oportunidad siéntanse libres de cambiarlo para ver cómo cambian los resultados.
+
+import pylab
+import scipy.cluster.hierarchy
+z=scipy.cluster.hierachy.linkage(D,'complete')
+
+Calcular el objeto Z por medio de la siguiente estructura de código:
+
+
+
+
+
+
