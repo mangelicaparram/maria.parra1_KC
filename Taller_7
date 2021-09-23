@@ -1,0 +1,34 @@
+#Taller_7 Agrupación en el conjunto de datos del vehículo
+
+#Descargar datos
+
+!wget -O cars_clus.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/cars_clus.csv
+--2021-09-23 16:41:51--  https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/cars_clus.csv
+Resolving s3-api.us-geo.objectstorage.softlayer.net (s3-api.us-geo.objectstorage.softlayer.net)... 67.228.254.196
+Connecting to s3-api.us-geo.objectstorage.softlayer.net (s3-api.us-geo.objectstorage.softlayer.net)|67.228.254.196|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 17774 (17K) [text/csv]
+Saving to: ‘cars_clus.csv’
+
+cars_clus.csv       100%[===================>]  17.36K  --.-KB/s    in 0s      
+
+2021-09-23 16:41:53 (192 MB/s) - ‘cars_clus.csv’ saved [17774/17774]
+
+#Leer los datos
+
+import pandas as pd
+filename = 'cars_clus.csv'
+#Lectura
+pdf = pd.read_csv(filename)
+print ("Shape: ", pdf.shape)
+pdf.head(5)
+
+Shape:  (159, 16)
+manufact	model	sales	resale	type	price	engine_s	horsepow	wheelbas	width	length	curb_wgt	fuel_cap	mpg	lnsales	partition
+0	Acura	Integra	16.919	16.360	0.000	21.500	1.800	140.000	101.200	67.300	172.400	2.639	13.200	28.000	2.828	0.0
+1	Acura	TL	39.384	19.875	0.000	28.400	3.200	225.000	108.100	70.300	192.900	3.517	17.200	25.000	3.673	0.0
+2	Acura	CL	14.114	18.225	0.000	$null$	3.200	225.000	106.900	70.600	192.000	3.470	17.200	26.000	2.647	0.0
+3	Acura	RL	8.588	29.725	0.000	42.000	3.500	210.000	114.600	71.400	196.600	3.850	18.000	22.000	2.150	0.0
+4	Audi	A4	20.397	22.255	0.000	23.990	1.800	150.000	102.600	68.200	178.000	2.998	16.400	27.000	3.015	0.0
+
+
