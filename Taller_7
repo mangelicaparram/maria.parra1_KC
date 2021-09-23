@@ -65,9 +65,9 @@ pdf.head(5): selecciona nuevamente cinco filas que cumplan las condiciones anter
 
 2-Seleccionar las columnas engine_s, horsepow, wheelbas, width, lenght, curb_wgt, fuel_cap y mpg y guardarlas en el dataset featureset
 
-featureset = pdf[[ 'engine_s', 'horsepow', 'wheelbas', 'width', 'length', 'curb_wgt', 'fuel_cap', 'mpg']]
-print(featureset)
-featureset.head(5)
+feature_set = pdf[[ 'engine_s', 'horsepow', 'wheelbas', 'width', 'length', 'curb_wgt', 'fuel_cap', 'mpg']]
+print(feature_set)
+feature_set.head(5)
 
  engine_s  horsepow  wheelbas  width  length  curb_wgt  fuel_cap   mpg
 0         1.8     140.0     101.2   67.3   172.4     2.639      13.2  28.0
@@ -89,3 +89,30 @@ engine_s	horsepow	wheelbas	width	length	curb_wgt	fuel_cap	mpg
 2	3.5	210.0	114.6	71.4	196.6	3.850	18.0	22.0
 3	1.8	150.0	102.6	68.2	178.0	2.998	16.4	27.0
 4	2.8	200.0	108.7	76.1	192.0	3.561	18.5	22.0
+
+#Clustering usando SCIpy
+
+3-En esta parte usamos el paquete Scipy para agrupar el conjunto de datos: Primero, calculamos la matriz de distancias.
+Convertir a una matriz de distancias el dataset feature_set utilizando la funcion featureset.values y guardar el resultado en feature_mtx
+
+distancias = pairwise_distances(
+                X      = feature_set,
+                metric ='euclidean'
+             )
+
+distancias[np.triu_indices(n=distancias.shape[0])] = np.nan
+
+feature_mtx = pd.DataFrame(
+                distancias,
+                columns=feature_set.index,
+                index = feature_set.index
+            )
+
+feature_mtx.iloc[:5,:5]
+
+	0	1	2	3	4
+0	NaN	NaN	NaN	NaN	NaN
+1	87.918092	NaN	NaN	NaN	NaN
+2	75.798460	17.087741	NaN	NaN	NaN
+3	12.062292	76.736819	64.275780	NaN	NaN
+4	64.682224	25.897141	13.374734	53.163399	NaN
