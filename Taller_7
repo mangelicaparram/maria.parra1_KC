@@ -95,24 +95,60 @@ engine_s	horsepow	wheelbas	width	length	curb_wgt	fuel_cap	mpg
 3-En esta parte usamos el paquete Scipy para agrupar el conjunto de datos: Primero, calculamos la matriz de distancias.
 Convertir a una matriz de distancias el dataset feature_set utilizando la funcion featureset.values y guardar el resultado en feature_mtx
 
-distancias = pairwise_distances(
-                X      = feature_set,
+feature_mtx = pairwise_distances(
+                X      = feature_set.values,
                 metric ='euclidean'
              )
 
-distancias[np.triu_indices(n=distancias.shape[0])] = np.nan
+print(feature_mtx)
 
-feature_mtx = pd.DataFrame(
-                distancias,
-                columns=feature_set.index,
-                index = feature_set.index
-            )
+[[  0.          87.9180919   75.79845989 ...  16.63650252  28.07638866
+   26.83496095]
+ [ 87.9180919    0.          17.0877409  ...  75.60022934 115.3194773
+  114.3440861 ]
+ [ 75.79845989  17.0877409    0.         ...  62.15304698 103.39586278
+  102.0832197 ]
+ ...
+ [ 16.63650252  75.60022934  62.15304698 ...   0.          43.35044747
+   41.45224917]
+ [ 28.07638866 115.3194773  103.39586278 ...  43.35044747   0.
+    3.75905427]
+ [ 26.83496095 114.3440861  102.0832197  ...  41.45224917   3.75905427
+    0.        ]]
 
-feature_mtx.iloc[:5,:5]
+Si todo marcha en orden no deberia haber problemas con los siguientes dos segmentos de código
 
-	0	1	2	3	4
-0	NaN	NaN	NaN	NaN	NaN
-1	87.918092	NaN	NaN	NaN	NaN
-2	75.798460	17.087741	NaN	NaN	NaN
-3	12.062292	76.736819	64.275780	NaN	NaN
-4	64.682224	25.897141	13.374734	53.163399	NaN
+import scipy
+leng = feature_mtx.shape[0]
+D = scipy.zeros([leng,leng])
+#D = numpy.zeros([leng,leng])
+for i in range(leng):
+    for j in range(leng):
+        D[i,j] = scipy.spatial.distance.euclidean(feature_mtx[i], feature_mtx[j])
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:3: DeprecationWarning: scipy.zeros is deprecated and will be removed in SciPy 2.0.0, use numpy.zeros instead
+  This is separate from the ipykernel package so we can avoid doing imports until
+ 
+import scipy
+leng = feature_mtx.shape[0]
+#D = scipy.zeros([leng,leng])
+D = numpy.zeros([leng,leng])
+for i in range(leng):
+    for j in range(leng):
+        D[i,j] = scipy.spatial.distance.euclidean(feature_mtx[i], feature_mtx[j])
+
+D
+array([[  0.        , 695.54964914, 617.88099439, ..., 133.886184  ,
+        263.78206235, 251.57343468],
+       [695.54964914,   0.        , 139.08404576, ..., 632.05912691,
+        817.38327764, 818.30048259],
+       [617.88099439, 139.08404576,   0.        , ..., 539.79383871,
+        768.9540551 , 767.44939952],
+       ...,
+       [133.886184  , 632.05912691, 539.79383871, ...,   0.        ,
+        384.76326673, 373.49300085],
+       [263.78206235, 817.38327764, 768.9540551 , ..., 384.76326673,
+          0.        ,  19.99239837],
+       [251.57343468, 818.30048259, 767.44939952, ..., 373.49300085,
+         19.99239837,   0.        ]])
+  
+  
